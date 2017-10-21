@@ -28,7 +28,6 @@ public class FiliereController {
 	
 	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public String add(@ModelAttribute Filiere filiere, Model model) {
-		System.out.println(filiere);
 		filiereService.save(filiere);			
 		return "redirect:list";
 	}
