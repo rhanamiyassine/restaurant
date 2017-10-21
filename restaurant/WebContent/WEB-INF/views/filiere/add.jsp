@@ -12,6 +12,7 @@
 		<br><br><br><br>
 		<spring:url value="/filiere/add" var="formUrl"/>
 		<form:form action="${formUrl}" method="POST" modelAttribute="filiere" cssClass="form-horizontal">
+		<form:input type="hidden" path="id"/>
 		<div class="form-group">
 		  <label class="control-label col-sm-2" for="email">Filière:</label>
 		  <div class="col-sm-10">
