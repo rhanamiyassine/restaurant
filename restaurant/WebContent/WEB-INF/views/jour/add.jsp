@@ -3,20 +3,20 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; UTF-8">
 	<c:import url="../fragments/css.jsp"/>
-	<title>Ajouter filière</title>
+	<title>Ajouter un jour</title>
 </head>
 <body>
 	<c:import url="../fragments/header.jsp"/>
 	<div class="container">
-		<h2>Ajouter une filière</h2>
+		<h2>Ajouter un jour</h2>
 		<br><br><br><br>
-		<spring:url value="/filiere/add" var="formUrl"/>
-		<form:form action="${formUrl}" method="POST" modelAttribute="filiere" cssClass="form-horizontal">
+		<spring:url value="/jour/add" var="formUrl"/>
+		<form:form action="${formUrl}" method="POST" modelAttribute="jour" cssClass="form-horizontal">
 		<form:input type="hidden" path="id"/>
 		<div class="form-group">
-		  <label class="control-label col-sm-2" for="email">Filière:</label>
+		  <label class="control-label col-sm-2" for="email">Jour:</label>
 		  <div class="col-sm-10">
-		    <form:input path="libelle" cssClass="form-control" placeholder="Nom de la filière"/>
+		    <form:input path="libelle" cssClass="form-control" placeholder="Nom du jour"/>
 		  </div>
 		</div>
 		<div class="form-group">        
