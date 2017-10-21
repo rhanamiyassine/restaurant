@@ -14,6 +14,4 @@ public interface UtilisateurDao {
 
 	void save(Utilisateur utilisateur);
 
-	void update(Utilisateur utilisateur);
-
 }

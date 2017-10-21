@@ -38,13 +38,6 @@ public class UtilisateurServiceImpl implements UtilisateurService {
 		utilisateurDao.save(utilisateur);
 	}
 	
-	@Override
-	public void update(Utilisateur utilisateur) {
-		utilisateurDao.update(utilisateur);
-	}
-	
-	
-	
 }
 
 

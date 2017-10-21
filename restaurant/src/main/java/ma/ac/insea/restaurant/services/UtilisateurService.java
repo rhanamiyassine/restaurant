@@ -13,7 +13,5 @@ public interface UtilisateurService {
 	public void delete(Long id);
 
 	void save(Utilisateur utilisateur);
-
-	void update(Utilisateur utilisateur);
 	
 }
