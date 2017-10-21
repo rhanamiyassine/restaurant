@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="<spring:url value="/resources/css/bootstrap.css"/>" />
