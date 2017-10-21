@@ -5,8 +5,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ma.ac.insea.restaurant</groupId>
 	<artifactId>restaurant</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-  
+	<version>1.0</version>
+	<packaging>war</packaging>
+	
 	<properties>
 		<springframework.version>4.3.11.RELEASE</springframework.version>
 		<hibernate.version>5.2.9.Final</hibernate.version>
