@@ -9,48 +9,47 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
-import ma.ac.insea.restaurant.entities.Filiere;
-import ma.ac.insea.restaurant.services.FiliereService;
+import ma.ac.insea.restaurant.entities.Jour;
+import ma.ac.insea.restaurant.services.JourService;
 
 @Controller
-@RequestMapping("/filiere")
-public class FiliereController {
+@RequestMapping("/jour")
+public class JourController {
 		
 	@Autowired
-	private FiliereService filiereService; 
+	private JourService jourService; 
 	
 	@RequestMapping(value="/add",method=RequestMethod.GET)
 	public String addPage(Model model) {
-		model.addAttribute("filiere",new Filiere());
-		return "filiere/add";
+		model.addAttribute("jour",new Jour());
+		return "jour/add";
 	}
 	
 	@RequestMapping(value="/add",method=RequestMethod.POST)
-	public String add(@ModelAttribute Filiere filiere, Model model) {
-		filiereService.save(filiere);			
+	public String add(@ModelAttribute Jour jour, Model model) {
+		jourService.save(jour);			
 		return "redirect:list";
 	}
 	
 	@RequestMapping(value="/{id}",method=RequestMethod.GET)
 	public String find(Model model,@PathVariable("id") Long id) {
-		model.addAttribute("filiere",this.filiereService.getById(id));
-		return "filiere/add";
+		model.addAttribute("jour",this.jourService.getById(id));
+		return "jour/add";
 	}
 	
 	@RequestMapping(value="remove/{id}",method=RequestMethod.GET)
 	public String remove(@PathVariable("id") Long id, Model model) {
-		this.filiereService.delete(id);
-		return "redirect:/filiere/list";
+		this.jourService.delete(id);
+		return "redirect:/jour/list";
 	}
 	
 	
 	@RequestMapping(value="/list",method=RequestMethod.GET)
 	public String list(Model model) {
-		List<Filiere> filieres=filiereService.read();
-		model.addAttribute("filieres",filieres);
-		return "filiere/list";
+		List<Jour> jours=jourService.read();
+		model.addAttribute("jours",jours);
+		return "jour/list";
 	}
 
 	
