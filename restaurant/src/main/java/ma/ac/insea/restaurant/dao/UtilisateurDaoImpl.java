@@ -45,13 +45,6 @@ public class UtilisateurDaoImpl implements UtilisateurDao{
 	}
 
 	@Override
-	public void update(Utilisateur utilisateur) {
-		// get current hibernate session
-		Session currentSession = sessionFactory.getCurrentSession();
-		// save/upate the Utilisateur ... finally LOL
-		currentSession.update(utilisateur);
-	}
-	@Override
 	public Utilisateur getById(Long id) {
 
 		// get the current hibernate session
